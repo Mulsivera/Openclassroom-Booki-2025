@@ -82,7 +82,6 @@ header {
     height: 79px;
     display: flex;
     justify-content: space-between;
-    align-items: top;
     margin-bottom: 30px;
 }
 
