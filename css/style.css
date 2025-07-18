@@ -1,6 +1,7 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 
 :root {
@@ -29,7 +30,7 @@ main {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 a {
@@ -97,14 +98,14 @@ header .logo-container img {
     height: 19px;
 }
 
-header .buttons-container {
+header .links-container {
     width: 344px;
     height: 35px;
     display: flex;
     justify-content: space-around;
 }
 
-header .buttons-container button {
+header .links-container a {
     background-color: white;
     border: none;
     display: flex;
@@ -112,7 +113,7 @@ header .buttons-container button {
     font-size: 16px;
 }
 
-header .buttons-container button:hover {
+header .links-container a:hover {
     border-top: 3px solid var(--main-color);
     color: var(--main-color);
 }
@@ -150,7 +151,8 @@ header .buttons-container button:hover {
     border-radius: 15px 0 0 15px;
 }
 
-.research .search-bar input, .research .search-bar input:focus {
+.research .search-bar input,
+.research .search-bar input:focus {
     height: 100%;
     width: 195px;
     border: 0px solid white;
@@ -192,10 +194,15 @@ header .buttons-container button:hover {
     height: 17px;
 }
 
+.research .filters {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .research .filters p {
     font-size: 18px;
     font-weight: 600;
-    margin: 0 0 20px 0
 }
 
 .research .filters .buttons {
@@ -278,7 +285,7 @@ header .buttons-container button:hover {
 .hebergements-cards a article img {
     width: 100%;
     height: 124px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 15px 15px 0 0;
     margin-bottom: 5px;
 }
 
@@ -418,6 +425,14 @@ footer {
         padding: 0px 50px;
     }
 
+    .research .filters {
+        display: block;
+    }
+
+    .research .filters p {
+        margin-bottom: 20px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -482,19 +497,21 @@ footer {
         align-items: center;
     }
 
-    header .buttons-container {
+    header .links-container {
         width: 100%;
     }
 
-    header .buttons-container button {
+    header .links-container a {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         height: 36px;
         width: 100%;
+        border-top: 0px;
+        border-bottom: 3px solid var(--main-bg-color);
     }
 
-    header .buttons-container button:hover {
+    header .links-container a:hover {
         border-top: 0px;
         border-bottom: 3px solid var(--main-color);
         color: var(--main-color);
@@ -521,7 +538,8 @@ footer {
         display: none;
     }
 
-    .research .search-bar input, .research .search-bar input:focus {
+    .research .search-bar input,
+    .research .search-bar input:focus {
         width: 153px;
     }
 
@@ -546,6 +564,7 @@ footer {
 
     .hebergements-and-populaires section {
         background-color: white;
+        border-radius: 0;
     }
 
     /* Hebergement */
